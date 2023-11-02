@@ -628,8 +628,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aeae6e199528da45a7944c75af56638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _missionsData:
-  - {fileID: 11400000, guid: b404768ab849d744fae1617d017ca179, type: 2}
-  - {fileID: 11400000, guid: 0414988ec99badd4a9178feffe632fa9, type: 2}
-  - {fileID: 11400000, guid: b404768ab849d744fae1617d017ca179, type: 2}
-  - {fileID: 11400000, guid: 02a26efe3200e574e8fd3b1dc86416f5, type: 2}
+  _lesson: {fileID: 11400000, guid: 4b2f3e60df7026e4983d5451b30fee23, type: 2}

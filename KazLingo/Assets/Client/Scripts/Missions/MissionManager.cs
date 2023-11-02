@@ -29,7 +29,7 @@ public class MissionManager : MonoBehaviour
     
     private void Start()
     {
-        Initialize(_lesson);
+        Initialize(_lesson );
     }
 
     private async void Initialize(LessonData lessonData)
@@ -56,6 +56,8 @@ public class MissionManager : MonoBehaviour
         _resultPanel.Close();
         
         await Task.Delay(1000);
+        
+        _windowsManager.OpenWindow<StartGameWindow>().Initialize(lessonData.LessonName, lessonData.Description, lessonData.Missions.Length);
 
         _windowsManager.CloseWindow<LoadingWindow>();
     }
