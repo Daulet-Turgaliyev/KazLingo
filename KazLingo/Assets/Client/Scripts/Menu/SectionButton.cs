@@ -43,7 +43,6 @@ namespace Client.Scripts
 
         public void OnClick()
         {
-            SceneManager.LoadScene("Polygon");
             onLessonDataSelected?.Invoke(_lessonData);
         }
     }

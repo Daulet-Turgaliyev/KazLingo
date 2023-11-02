@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a31eb456ce14ea489a0ab47d0b288d7, type: 3}
   m_Name: InputWordMission
   m_EditorClassIdentifier: 
-  <Explanation>k__BackingField: "\u0422\u0443\u0442 \u043D\u0443\u0436\u043D\u043E
-    \u0431\u044B\u043B\u043E \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u041A\u0435\u043A"
-  <QuestionText>k__BackingField: "\u041A\u043E\u0433\u0434\u0430 \u0440\u043E\u0436\u0434\u0430\u0435\u0442\u0441\u044F
-    \u043A\u0435\u043A \u0442\u043E \u043C\u044B \u0432\u0441\u0435 \u0434\u0440\u0443\u0436\u043D\u043E
-    \u0433\u043E\u0432\u043E\u0440\u0438\u043C "
-  <TrueText>k__BackingField: "\u043A\u0435\u043A"
-  <InputIndex>k__BackingField: 10
+  <Explanation>k__BackingField: "\u0422\u04B1\u0440\u0430\u0441\u044B\u04A3 - \u043F\u0440\u043E\u0436\u0438\u0432\u0430\u0435\u0448\u044C"
+  <InputWordMission>k__BackingField: {fileID: 8931342949875482516, guid: 0e297ae5219824e42b31d9a3e17a28a6, type: 3}
+  <QuestionText>k__BackingField: "\u041C\u0435\u043D \u0410\u0441\u0442\u0430\u043D\u0430\u0434\u0430
+    \u0442\u04B1\u0440\u0430\u043C\u044B\u043D, \u0441\u0435\u043D \u049B\u0430\u0439\u0434\u0430"
+  <TrueText>k__BackingField: "\u0442\u04B1\u0440\u0430\u0441\u044B\u04A3"
+  <InputIndex>k__BackingField: 6

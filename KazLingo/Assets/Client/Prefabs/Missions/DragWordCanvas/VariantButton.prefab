@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a690d2c0fb3b72a4bb20676afa420b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clickable: 1
+  _clickable: 0
   _maxClickTime: 0.2
   _draggable: 1
   _interpolationSpeed: 10

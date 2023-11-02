@@ -14,7 +14,7 @@ public class StartGameWindow : BaseWindow
         {
                 _titleText.text = tittle;
                 _descriptionText.text = description;
-                _missionsText.text = $"В данном задании: {missionCount} заданий";
+                _missionsText.text = $"В данном уроке:\n{missionCount} упражнений";
         }
         
         public void StartGame()

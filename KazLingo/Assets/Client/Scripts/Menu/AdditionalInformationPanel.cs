@@ -3,6 +3,7 @@ using Client.Scripts.Data;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Client.Scripts
 {
@@ -15,6 +16,11 @@ namespace Client.Scripts
         {
             _titleText.text = lessonData.Tittle;
             _descriptionText.text = lessonData.Description;
+        }
+
+        public void Open()
+        {
+            SceneManager.LoadScene("GameScene");
         }
         
         public void Close()
