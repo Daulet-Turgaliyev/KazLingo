@@ -1,14 +1,22 @@
 {
     "name": "Main",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:5b6d4db71d5488e44a6401ce207e19b5",
+        "GUID:93a80670cd9e14ba4a95c4d94d46b5b7",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:19f99b70a1e108a41863ebccc826c135"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
         "Entitas.dll",
-        "Sirenix.OdinInspector.Attributes.dll"
+        "Sirenix.OdinInspector.Attributes.dll",
+        "DOTween.dll",
+        "Zenject-usage.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
