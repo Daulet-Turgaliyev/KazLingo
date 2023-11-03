@@ -76,6 +76,12 @@ namespace Client.Scripts.Missions
                 return false;
             }
 
+            if (_currentInteractor.GetComponentInChildren<VariantButton>() == null)
+            {
+                Debug.LogWarning($"{nameof(VariantButton)} is null. Check It");
+                return false;
+            }
+            
             string answer = _currentInteractor.GetComponentInChildren<VariantButton>().Answer;
             
             if (answer == _trueAnswer)

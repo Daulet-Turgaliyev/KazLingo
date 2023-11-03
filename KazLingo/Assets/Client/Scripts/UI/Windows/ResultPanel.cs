@@ -17,7 +17,8 @@
         [SerializeField] private Color _falseColor;
 
         public Action onClicked = () => { };
-        
+
+
 
         public void SetTrue(MissionBaseData data)
         {

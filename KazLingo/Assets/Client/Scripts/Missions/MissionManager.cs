@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Client.Scripts.Data;
+using Client.Scripts.GameStats;
 using Client.Scripts.Missions;
 using Client.Scripts.UI;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class MissionManager : MonoBehaviour
     private ResultPanel _resultPanel;
 
     private Missions _missions;
+    private GameStats _gameStats;
 
     [SerializeField] private LessonData _lesson;
     
@@ -23,13 +25,13 @@ public class MissionManager : MonoBehaviour
     {
         _windowsManager = windowsManager;
         _audioController = audioController;
-
+        _gameStats = new GameStats();
         _missions = new Missions();
     }
     
     private void Start()
     {
-        Initialize(_lesson );
+        Initialize(_lesson);
     }
 
     private async void Initialize(LessonData lessonData)
@@ -57,7 +59,7 @@ public class MissionManager : MonoBehaviour
         
         await Task.Delay(1000);
         
-        _windowsManager.OpenWindow<StartGameWindow>().Initialize(lessonData.LessonName, lessonData.Description, lessonData.Missions.Length);
+        _windowsManager.OpenWindow<StartGameWindow>().Initialize(_gameStats, lessonData.LessonName, lessonData.Description, lessonData.Missions.Length);
 
         _windowsManager.CloseWindow<LoadingWindow>();
     }
@@ -101,11 +103,13 @@ public class MissionManager : MonoBehaviour
         {
             _audioController.PlayTrueSound();
             _resultPanel.SetTrue(_missions.GetCurrentMission.MissionBaseData);
+            _gameStats.AddTruePoint(10);
         }
         else
         {
             _audioController.PlayFalseSound();
-            _resultPanel.SetFalse(_missions.GetCurrentMission.MissionBaseData);;
+            _resultPanel.SetFalse(_missions.GetCurrentMission.MissionBaseData);
+            _gameStats.AddFalsePoint(10);
         }
     }
 
@@ -116,11 +120,12 @@ public class MissionManager : MonoBehaviour
         if (_missions.HasNextMission())
         {
             _missions.ActiveNextMission();
-            _servicePanel.UpdateProgressSlider(_missions.GetMissionCount - 1);
+            _servicePanel.UpdateProgressSlider(_missions.GetCurrentLevelIndex - 1);
         }
         else
         {
-            _windowsManager.OpenWindow<GameOverWindow>();
+            _gameStats.Stop(Time.time);
+            _windowsManager.OpenWindow<GameOverWindow>().Initialize(_gameStats);
         }
     }
 
