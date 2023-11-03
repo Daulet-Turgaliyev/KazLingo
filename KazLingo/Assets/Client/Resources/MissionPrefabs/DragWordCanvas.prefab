@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1263425463212687993}
   - component: {fileID: 1263425463212688006}
   - component: {fileID: 1263425463212688007}
-  - component: {fileID: 1263425463212688004}
   m_Layer: 6
   m_Name: Variants Layout
   m_TagString: Untagged
@@ -59,9 +58,9 @@ MonoBehaviour:
   _verticalInnerAlign: 0
   _depthInnerAlign: 0
   _gapType: 0
-  _gap: 9.8
+  _gap: 20
   _wrapGapType: 0
-  _wrapGap: 46.67
+  _wrapGap: 20
 --- !u!114 &1263425463212687993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,15 +79,15 @@ MonoBehaviour:
   LayoutRotation: {x: 0, y: 0, z: 0, w: 1}
   AdapterBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 924.935, z: 0}
+    m_Extent: {x: 540, y: 495.935, z: 0}
   LayoutBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 924.935, z: 0}
+    m_Extent: {x: 540, y: 495.935, z: 0}
   RotatedAndScaledBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 924.935, z: 0}
+    m_Extent: {x: 540, y: 495.935, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1284, y: 2778, z: 0}
+  FillSize: {x: 1080, y: 1920, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
   TargetPosition: {x: 0, y: -464.065, z: 0}
   TargetRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -172,21 +171,6 @@ MonoBehaviour:
   _minObjects: 0
   _maxObjects: 0
   _margin: {x: 0, y: 0, z: 0}
---- !u!114 &1263425463212688004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263425463212688002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407693618250df548b7d6eb581d63474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color1: {r: 1, g: 1, b: 1, a: 1}
-  _color2: {r: 0.93725497, g: 0.27450982, b: 0.45882356, a: 1}
-  _runOnLayoutChange: 0
 --- !u!1 &7122229613092970201
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +365,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -4.305, y: -610}
-  m_SizeDelta: {x: 1186.96, y: 200}
+  m_SizeDelta: {x: 995.2, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7122229614154474180
 MonoBehaviour:
@@ -406,9 +390,9 @@ MonoBehaviour:
   _verticalInnerAlign: 2
   _depthInnerAlign: 1
   _gapType: 0
-  _gap: 0
+  _gap: 20
   _wrapGapType: 0
-  _wrapGap: 14
+  _wrapGap: 20
 --- !u!114 &7122229614154474183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,24 +411,24 @@ MonoBehaviour:
   LayoutRotation: {x: 0, y: 0, z: 0, w: 1}
   AdapterBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 593.48, y: 100, z: 0}
+    m_Extent: {x: 497.6, y: 100, z: 0}
   LayoutBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 593.48, y: 100, z: 0}
+    m_Extent: {x: 497.6, y: 100, z: 0}
   RotatedAndScaledBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 593.48, y: 100, z: 0}
+    m_Extent: {x: 497.6, y: 100, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1284, y: 2778, z: 0}
+  FillSize: {x: 1080, y: 1920, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
   TargetPosition: {x: -4.305, y: -610, z: 0}
   TargetRotation: {x: 0, y: 0, z: 0, w: 1}
   TargetScale: {x: 1, y: 1, z: 1}
-  TargetRectSize: {x: 1186.96, y: 200, z: 0}
-  TransformPosition: {x: -4.305, y: 779, z: 0}
+  TargetRectSize: {x: 995.2, y: 200, z: 0}
+  TransformPosition: {x: -4.305, y: 350, z: 0}
   TransformRotation: {x: 0, y: 0, z: 0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
-  TransformRectSize: {x: 1186.96, y: 200}
+  TransformRectSize: {x: 995.2, y: 200}
 --- !u!114 &7122229614154474182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,13 +673,13 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 40, y: 40, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1159.51, y: 105.5769, z: 0}
+  FillSize: {x: 955.51, y: 105.5769, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
-  TargetPosition: {x: -7.755001, y: 0, z: 0}
+  TargetPosition: {x: 10.244999, y: 0, z: 0}
   TargetRotation: {x: -0, y: -0, z: -0, w: 1}
   TargetScale: {x: 1, y: 1, z: 1}
   TargetRectSize: {x: 80, y: 80, z: 0}
-  TransformPosition: {x: -631.755, y: 0, z: 0}
+  TransformPosition: {x: -529.755, y: 0, z: 0}
   TransformRotation: {x: -0, y: -0, z: -0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
   TransformRectSize: {x: 80, y: 80}

@@ -73,5 +73,20 @@ namespace Client.Scripts.Missions
         {
             return input.ToLower().Replace(" ", "");
         }
+        
+        public override void ResetMission()
+        {
+            for (int i = 0; i < _questionTransform.childCount; i++)
+            {
+                Destroy(_questionTransform.GetChild(i).gameObject);
+            }
+            
+            for (int i = 0; i < _variantTransform.childCount; i++)
+            {
+                Destroy(_variantTransform.GetChild(i).gameObject);
+            }
+
+            Initialize(MissionBaseData);
+        }
     }
 }

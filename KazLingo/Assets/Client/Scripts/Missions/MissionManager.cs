@@ -15,18 +15,20 @@ public class MissionManager : MonoBehaviour
 
     private Missions _missions;
     private GameStats _gameStats;
-
+    
     [SerializeField] private LessonData _lesson;
     
     private MissionBaseData[] _missionsData;
     
     [Inject]
-    private void Constructor(WindowsManager windowsManager, AudioController audioController)
+    private void Constructor(WindowsManager windowsManager, AudioController audioController, DiContainer diContainer)
     {
         _windowsManager = windowsManager;
         _audioController = audioController;
         _gameStats = new GameStats();
         _missions = new Missions();
+        
+        diContainer.Inject(_missions);
     }
     
     private void Start()
@@ -38,6 +40,7 @@ public class MissionManager : MonoBehaviour
     {
         _windowsManager.OpenWindow<LoadingWindow>();
         _missionsData = _lesson.Missions;
+        
         foreach (var mission in _missionsData)
         {
             AMission newMission = CreateMission(mission);
@@ -57,10 +60,8 @@ public class MissionManager : MonoBehaviour
         
         _resultPanel.Close();
         
-        await Task.Delay(1000);
-        
         _windowsManager.OpenWindow<StartGameWindow>().Initialize(_gameStats, lessonData.LessonName, lessonData.Description, lessonData.Missions.Length);
-
+        await Task.Delay(1000);
         _windowsManager.CloseWindow<LoadingWindow>();
     }
 
@@ -103,13 +104,23 @@ public class MissionManager : MonoBehaviour
         {
             _audioController.PlayTrueSound();
             _resultPanel.SetTrue(_missions.GetCurrentMission.MissionBaseData);
-            _gameStats.AddTruePoint(10);
+            if (_missions.GetFalseMissionActive == false)
+            {
+                _missions.AddTrueMission(_missions.GetCurrentMission);
+                _gameStats.AddTruePoint(_missions.GetCurrentMission.MissionBaseData.Points);
+                _servicePanel.UpdateProgressSlider(_missions.GetTrueMissions.Count);
+            }
         }
         else
         {
             _audioController.PlayFalseSound();
             _resultPanel.SetFalse(_missions.GetCurrentMission.MissionBaseData);
-            _gameStats.AddFalsePoint(10);
+            _missions.AddFalseMission(_missions.GetCurrentMission);
+            
+            if (_missions.GetFalseMissionActive == false)
+            {
+                _gameStats.AddFalsePoint(_missions.GetCurrentMission.MissionBaseData.Points);
+            }
         }
     }
 
@@ -120,10 +131,18 @@ public class MissionManager : MonoBehaviour
         if (_missions.HasNextMission())
         {
             _missions.ActiveNextMission();
-            _servicePanel.UpdateProgressSlider(_missions.GetCurrentLevelIndex - 1);
+        }
+        else if (_missions.HasFalseMissions())
+        {
+            _missions.LoadFalseMissions();
+            foreach (var mission in _missions.GetAllMissions)
+            {
+                mission.ResetMission();
+            }
         }
         else
         {
+            _missions.DisableLastMission();
             _gameStats.Stop(Time.time);
             _windowsManager.OpenWindow<GameOverWindow>().Initialize(_gameStats);
         }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2261950450b4af1bd4805b00b425669, type: 3}
   m_Name: InputTextData
   m_EditorClassIdentifier: 
+  <Points>k__BackingField: 30
   <Explanation>k__BackingField: "\u0421\u0435\u043D\u0456\u04A3 \u0430\u0442\u044B\u04A3
     \u043A\u0456\u043C?"
   <InputTextMission>k__BackingField: {fileID: 2679960707734778974, guid: c21c2a5365eed4d49ac88cb82a25f947, type: 3}

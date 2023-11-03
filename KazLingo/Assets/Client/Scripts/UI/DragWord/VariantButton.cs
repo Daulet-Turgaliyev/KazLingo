@@ -1,8 +1,7 @@
-using System;
-using Flexalon;
+using Client.Scripts.UI;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using Zenject;
 
 namespace Client.Scripts.Missions.DragWordMissionSpace
 {
@@ -12,13 +11,9 @@ namespace Client.Scripts.Missions.DragWordMissionSpace
         private Transform _targetTransform;
         public string Answer { get; private set; }
 
-        private void Awake()
-        {
-            _answerText = GetComponentInChildren<TextMeshProUGUI>();
-        }
-
         public void Initialize(string text, Transform target)
         {
+            _answerText = GetComponentInChildren<TextMeshProUGUI>();
             _answerText.text = text;
             Answer = text;
             _targetTransform = target;
@@ -26,6 +21,7 @@ namespace Client.Scripts.Missions.DragWordMissionSpace
 
         public void OnClick()
         {
+            AudioController.Instance.PlaySelectVariantSound();
             if (_targetTransform != null)
             {
                 transform.SetParent(_targetTransform);

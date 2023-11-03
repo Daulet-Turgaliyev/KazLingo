@@ -12,5 +12,6 @@ namespace Client.Scripts.Missions
             MissionBaseData = data;
         }
         public abstract bool CheckAnswer();
+        public abstract void ResetMission();
     }
 }

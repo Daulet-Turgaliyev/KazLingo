@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Client.Scripts.Data;
 using Client.Scripts.Missions.DragWordMissionSpace;
 using UnityEngine;
@@ -59,9 +60,10 @@ namespace Client.Scripts.Missions
             }
         }
         
-        private void CreateInteractor(int index)
+        private async void CreateInteractor(int index)
         {
             InteractorQuestion questionElement = Instantiate(_interactorQuestion, _questionTransform);
+            await Task.Delay(500);
             questionElement.transform.SetSiblingIndex(index);
             _currentInteractor = questionElement;
         }
@@ -92,6 +94,21 @@ namespace Client.Scripts.Missions
             return false;
 
 
+        }
+
+        public override void ResetMission()
+        {
+            for (int i = 0; i < _questionTransform.childCount; i++)
+            {
+                Destroy(_questionTransform.GetChild(i).gameObject);
+            }
+            
+            for (int i = 0; i < _variantTransform.childCount; i++)
+            {
+                Destroy(_variantTransform.GetChild(i).gameObject);
+            }
+
+            Initialize(MissionBaseData);
         }
     }
 }

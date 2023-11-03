@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4987749266980642340}
   - component: {fileID: 4987749266980642343}
   - component: {fileID: 4987749266980642342}
-  - component: {fileID: 4987749266980642337}
   - component: {fileID: 4987749266980642361}
   - component: {fileID: 4987749266980642360}
   - component: {fileID: 68499863097783225}
@@ -96,7 +95,7 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 75, y: 40, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1080, y: 2280, z: 0}
+  FillSize: {x: 1080, y: 1920, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
   TargetPosition: {x: -82.130005, y: 0, z: 0}
   TargetRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -180,21 +179,6 @@ MonoBehaviour:
   _minObjects: 1
   _maxObjects: 1
   _margin: {x: 0, y: 0, z: 0}
---- !u!114 &4987749266980642337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4987749266980642339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407693618250df548b7d6eb581d63474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color1: {r: 1, g: 1, b: 1, a: 1}
-  _color2: {r: 0.93725497, g: 0.27450982, b: 0.45882356, a: 1}
-  _runOnLayoutChange: 0
 --- !u!222 &4987749266980642361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -216,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+  m_Color: {r: 0.1764706, g: 0.28627452, b: 0.38039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

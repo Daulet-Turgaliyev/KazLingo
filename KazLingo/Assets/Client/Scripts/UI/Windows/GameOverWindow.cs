@@ -1,7 +1,9 @@
 using Client.Scripts.GameStats;
+using Client.Scripts.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class GameOverWindow : BaseWindow
 {
@@ -11,6 +13,8 @@ public class GameOverWindow : BaseWindow
      [SerializeField] private TextMeshProUGUI _timeText;
      [SerializeField] private TextMeshProUGUI _commentsText;
 
+     [Inject] private AudioController _audioController;
+     
     public void Initialize(GameStats gameStats)
     {
         _gameStats = gameStats;
@@ -34,6 +38,8 @@ public class GameOverWindow : BaseWindow
         {
             _commentsText.text = "Не расстраивайся! Ты неплохо поработал";
         }
+        
+        _audioController.PlayGameOverSound();
     }
 
     public void ExitToMenu()

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18c2c43b99844ee9e3d7e356f817027, type: 3}
   m_Name: PutTogetherSentenceData
   m_EditorClassIdentifier: 
+  <Points>k__BackingField: 20
   <Explanation>k__BackingField: "\u0428\u0430\u0431\u0443\u044B\u043B\u0434\u0430\u0440\u0434\u044B\u04A3
     \u0436\u0430\u043D\u044B - \u04B1\u043D\u0430\u043C\u0430\u0493\u0430\u043D \u043A\u0456\u0442\u0430\u043F\u0442\u0430\u0440\u0434\u044B
     \u043E\u049B\u0443."

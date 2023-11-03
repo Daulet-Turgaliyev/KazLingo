@@ -46,5 +46,10 @@ namespace Client.Scripts.Missions
         {
             return input.ToLower().Replace(" ", "");
         }
+        
+        public override void ResetMission()
+        {
+            _inputAnswer.text = string.Empty;
+        }
     }
 }

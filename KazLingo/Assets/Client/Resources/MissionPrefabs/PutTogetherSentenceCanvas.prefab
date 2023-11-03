@@ -162,24 +162,24 @@ MonoBehaviour:
   LayoutRotation: {x: 0, y: 0, z: 0, w: 1}
   AdapterBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 1389, z: 0}
+    m_Extent: {x: 540, y: 960, z: 0}
   LayoutBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 1389, z: 0}
+    m_Extent: {x: 540, y: 960, z: 0}
   RotatedAndScaledBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 1389, z: 0}
+    m_Extent: {x: 540, y: 960, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1284, y: 2778, z: 0}
+  FillSize: {x: 1080, y: 1920, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
   TargetPosition: {x: 0, y: 0, z: 0}
   TargetRotation: {x: 0, y: 0, z: 0, w: 1}
   TargetScale: {x: 1, y: 1, z: 1}
-  TargetRectSize: {x: 1284, y: 2778, z: 0}
+  TargetRectSize: {x: 1080, y: 1920, z: 0}
   TransformPosition: {x: 0, y: 0, z: 0}
   TransformRotation: {x: 0, y: 0, z: 0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
-  TransformRectSize: {x: 1284, y: 2778}
+  TransformRectSize: {x: 1080, y: 1920}
 --- !u!114 &4565146921197489307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +491,6 @@ GameObject:
   - component: {fileID: 4565146921622538274}
   - component: {fileID: 4565146921622538275}
   - component: {fileID: 4565146921622538284}
-  - component: {fileID: 4565146921622538285}
   m_Layer: 6
   m_Name: VariantList
   m_TagString: Untagged
@@ -507,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565146921622538287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -761.2279, z: 0}
+  m_LocalPosition: {x: 0, y: -590.66174, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -554,25 +553,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parent: {fileID: 4565146921197489285}
   SiblingIndex: 1
-  LayoutPosition: {x: 0, y: -552.2529, z: 0}
+  LayoutPosition: {x: 0, y: -381.6867, z: 0}
   LayoutRotation: {x: 0, y: 0, z: 0, w: 1}
   AdapterBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 627.772, z: 0}
+    m_Extent: {x: 540, y: 369.33823, z: 0}
   LayoutBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 627.772, z: 0}
+    m_Extent: {x: 540, y: 369.33823, z: 0}
   RotatedAndScaledBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 627.772, z: 0}
+    m_Extent: {x: 540, y: 369.33823, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1284, y: 1673.4939, z: 0}
+  FillSize: {x: 1080, y: 1156.6265, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
-  TargetPosition: {x: 0, y: -761.2279, z: 0}
+  TargetPosition: {x: 0, y: -590.66174, z: 0}
   TargetRotation: {x: 0, y: 0, z: 0, w: 1}
   TargetScale: {x: 1, y: 1, z: 1}
   TargetRectSize: {x: 0, y: 0, z: 0}
-  TransformPosition: {x: 0, y: -761.2279, z: 0}
+  TransformPosition: {x: 0, y: -590.66174, z: 0}
   TransformRotation: {x: 0, y: 0, z: 0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
   TransformRectSize: {x: 860, y: 100}
@@ -650,21 +649,6 @@ MonoBehaviour:
   _minObjects: 0
   _maxObjects: 0
   _margin: {x: 0, y: 0, z: 0}
---- !u!114 &4565146921622538285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4565146921622538287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407693618250df548b7d6eb581d63474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color1: {r: 1, g: 1, b: 1, a: 1}
-  _color2: {r: 0.93725497, g: 0.27450982, b: 0.45882356, a: 1}
-  _runOnLayoutChange: 0
 --- !u!1 &4565146922472211762
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +662,6 @@ GameObject:
   - component: {fileID: 4565146922472211765}
   - component: {fileID: 4565146922472211766}
   - component: {fileID: 4565146922472211767}
-  - component: {fileID: 4565146922472211760}
   m_Layer: 6
   m_Name: QuestionList
   m_TagString: Untagged
@@ -694,7 +677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565146922472211762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 431.242, z: 0}
+  m_LocalPosition: {x: 0, y: 172.80823, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -741,25 +724,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parent: {fileID: 4565146921197489285}
   SiblingIndex: 0
-  LayoutPosition: {x: 0, y: 836.747, z: 0}
+  LayoutPosition: {x: 0, y: 578.31323, z: 0}
   LayoutRotation: {x: 0, y: 0, z: 0, w: 1}
   AdapterBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 537.758, z: 0}
+    m_Extent: {x: 540, y: 367.19174, z: 0}
   LayoutBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 537.758, z: 0}
+    m_Extent: {x: 540, y: 367.19174, z: 0}
   RotatedAndScaledBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 642, y: 537.758, z: 0}
+    m_Extent: {x: 540, y: 367.19174, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1284, y: 1673.4939, z: 0}
+  FillSize: {x: 1080, y: 1156.6265, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
-  TargetPosition: {x: 0, y: 431.242, z: 0}
+  TargetPosition: {x: 0, y: 172.80823, z: 0}
   TargetRotation: {x: 0, y: 0, z: 0, w: 1}
   TargetScale: {x: 1, y: 1, z: 1}
   TargetRectSize: {x: 0, y: 0, z: 0}
-  TransformPosition: {x: 0, y: 431.242, z: 0}
+  TransformPosition: {x: 0, y: 172.80823, z: 0}
   TransformRotation: {x: 0, y: 0, z: 0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
   TransformRectSize: {x: 860, y: 100}
@@ -837,21 +820,6 @@ MonoBehaviour:
   _minObjects: 0
   _maxObjects: 0
   _margin: {x: 0, y: 0, z: 0}
---- !u!114 &4565146922472211760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4565146922472211762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407693618250df548b7d6eb581d63474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _color1: {r: 1, g: 1, b: 1, a: 1}
-  _color2: {r: 0.95294124, g: 0.26666668, b: 0.45882356, a: 1}
-  _runOnLayoutChange: 0
 --- !u!1 &4565146922500086292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,13 +1490,13 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 40, y: 40, z: 0}
   ComponentScale: {x: 1, y: 1, z: 1}
-  FillSize: {x: 1159.51, y: 105.5769, z: 0}
+  FillSize: {x: 955.51, y: 105.5769, z: 0}
   ShrinkSize: {x: 999999, y: 999999, z: 999999}
   TargetPosition: {x: 10.244999, y: 0, z: 0}
   TargetRotation: {x: -0, y: -0, z: -0, w: 1}
   TargetScale: {x: 1, y: 1, z: 1}
   TargetRectSize: {x: 80, y: 80, z: 0}
-  TransformPosition: {x: -631.755, y: 0, z: 0}
+  TransformPosition: {x: -529.755, y: 0, z: 0}
   TransformRotation: {x: -0, y: -0, z: -0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
   TransformRectSize: {x: 80, y: 80}

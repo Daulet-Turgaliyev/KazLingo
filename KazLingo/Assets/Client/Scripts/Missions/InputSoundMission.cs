@@ -1,10 +1,7 @@
 using System;
 using Client.Scripts.Data;
-using Client.Scripts.Missions.DragWordMissionSpace;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Client.Scripts.Missions
 {
@@ -61,6 +58,11 @@ namespace Client.Scripts.Missions
         private string NormalizeString(string input)
         {
             return input.ToLower().Replace(" ", "");
+        }
+        
+        public override void ResetMission()
+        {
+            _inputAnswer.text = string.Empty;
         }
     }
 }

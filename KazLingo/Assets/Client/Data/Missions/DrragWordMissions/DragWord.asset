@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a60b3c42a1401ea71d6d531feaab08, type: 3}
   m_Name: DragWord
   m_EditorClassIdentifier: 
+  <Points>k__BackingField: 15
   <Explanation>k__BackingField: "\u0422\u04B1\u0440\u0430\u0441\u044B\u04A3 \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0438\u0442\u0441\u044F
     \u043A\u0430\u043A \"\u043F\u0440\u043E\u0436\u0438\u0432\u0430\u0435\u0448\u044C\""
+  <DragWordMission>k__BackingField: {fileID: 7677574827787644785, guid: 8a799ce71495b3642afe680a807bd791, type: 3}
   <QuestionText>k__BackingField: "\u0421\u0435\u043D \u049B\u0430\u0439\u0434\u0430"
   <AnswerText>k__BackingField: "\u0422\u04B1\u0440\u0430\u0441\u044B\u04A3 \u0410\u0442\u044B\u04A3
     \u0422\u0430\u043D\u044B\u0441\u049B\u0430\u043D\u044B\u043C\u0430 \u0421\u04D9\u043B\u0435\u043C\u0435\u0442\u0441\u0456\u0437
