@@ -16,7 +16,10 @@
         "Entitas.dll",
         "Sirenix.OdinInspector.Attributes.dll",
         "DOTween.dll",
-        "Zenject-usage.dll"
+        "Zenject-usage.dll",
+        "Google.Apis.Translate.v2.dll",
+        "Google.Cloud.Translation.V2.dll",
+        "Google.Apis.Auth.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

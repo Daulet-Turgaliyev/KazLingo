@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Client.Scripts.Data;
 using Client.Scripts.Missions.DragWordMissionSpace;
+using Google.Cloud.Translation.V2;
 using TMPro;
 using UnityEngine;
 
@@ -47,7 +48,6 @@ namespace Client.Scripts.Missions
             TMP_InputField questionElement = Instantiate(_inputField, _questionTransform);
             await Task.Delay(500);
             questionElement.transform.SetSiblingIndex(index);
-            Debug.Log(index);
             _currentInputText = questionElement;
         }
 

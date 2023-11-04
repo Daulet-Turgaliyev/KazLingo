@@ -15,10 +15,10 @@ public class ServicePanel : BaseWindow
         _progressSlider.value = 0;
     }
 
-    public void UpdateProgressSlider(int falseMission)
+    public void UpdateProgressSlider(int allActiveMission)
     {
-        int trueMission= missionCount - falseMission;
-        Debug.Log($"{missionCount} - {falseMission} = {trueMission}");
+        int trueMission = missionCount - allActiveMission;
+        Debug.Log(trueMission);
         if (trueMission > _progressSlider.value)
         {
             _progressSlider.value = trueMission;

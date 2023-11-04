@@ -13,12 +13,9 @@ namespace Client.Scripts.Missions
         
         private readonly List<AMission> _trueMissions = new List<AMission>();
         public IReadOnlyList<AMission> GetTrueMissions => _trueMissions;
-
-
+        
         private readonly List<AMission> _falseMission = new List<AMission>();
-
-        public int TrueMissionCount => _trueMissions.Count;
-
+        
 
         public int GetMissionCount => _allMissions.Count;
         public AMission GetCurrentMission => _allMissions[_currentMissionIndex];

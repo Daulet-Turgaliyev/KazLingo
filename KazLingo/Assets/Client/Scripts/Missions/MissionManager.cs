@@ -108,7 +108,6 @@ public class MissionManager : MonoBehaviour
             {
                 _missions.AddTrueMission(_missions.GetCurrentMission);
                 _gameStats.AddTruePoint(_missions.GetCurrentMission.MissionBaseData.Points);
-                _servicePanel.UpdateProgressSlider(_missions.GetTrueMissions.Count);
             }
         }
         else
@@ -122,6 +121,8 @@ public class MissionManager : MonoBehaviour
                 _gameStats.AddFalsePoint(_missions.GetCurrentMission.MissionBaseData.Points);
             }
         }
+        
+        _servicePanel.UpdateProgressSlider(_missions.GetAllMissions.Count);
     }
 
     private void NextLevel()
