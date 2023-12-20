@@ -1,7 +1,9 @@
+using System;
 using System.Threading.Tasks;
 using Client.Scripts.Data;
 using Client.Scripts.Missions.DragWordMissionSpace;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Client.Scripts.Missions
 {
@@ -15,7 +17,7 @@ namespace Client.Scripts.Missions
         
         [SerializeField] private InteractorQuestion _interactorQuestion;
 
-        private string _trueAnswer;
+        private string[] _trueAnswers;
         private InteractorQuestion _currentInteractor;
         
         public override void Initialize(MissionBaseData data)
@@ -28,27 +30,25 @@ namespace Client.Scripts.Missions
                 SplitQuestionText(dragWordData.QuestionText);
                 SplitVariantText(dragWordData.AnswerText);
                 CreateInteractor(dragWordData.InputIndex);
-                _trueAnswer = dragWordData.TrueText;
+                _trueAnswers = dragWordData.CorrectOption;
             }
         }        
 
-        private void SplitQuestionText(string inputString)
+        private void SplitQuestionText(WordInfo words)
         {
-            string[] words = inputString.Split(' ');
-            foreach (string word in words)
+            foreach (string word in words.Kazakh)
             {
                 QuestionVariant questionElement = Instantiate(questionVariant, _questionTransform);
                 questionElement.Initialize(word);
             }
         }
         
-        private void SplitVariantText(string inputString)
+        private void SplitVariantText(WordInfo words)
         {
-            string[] words = inputString.Split(' ');
-            GameObject[] elements = new GameObject[words.Length];
-            for (var i = 0; i < words.Length; i++)
+            GameObject[] elements = new GameObject[words.Kazakh.Length];
+            for (var i = 0; i < words.Kazakh.Length; i++)
             {
-                var word = words[i];
+                var word = words.Kazakh[i];
                 VariantButton questionElement = Instantiate(_variantButton, _variantTransform);
                 questionElement.Initialize(word, _questionTransform);
                 elements[i] = questionElement.gameObject;
@@ -85,10 +85,19 @@ namespace Client.Scripts.Missions
             }
             
             string answer = _currentInteractor.GetComponentInChildren<VariantButton>().Answer;
+
+            string formattedUserInput = NormalizeString(answer);
             
-            if (answer == _trueAnswer)
+            foreach (var trueAnswer in _trueAnswers)
             {
-                return true;
+                string formattedTargetString = NormalizeString(trueAnswer);
+
+                bool areEqual = formattedUserInput.Equals(formattedTargetString, StringComparison.OrdinalIgnoreCase);
+            
+                if (areEqual == true)
+                {
+                    return true;
+                }
             }
 
             return false;

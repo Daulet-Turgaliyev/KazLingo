@@ -43,11 +43,6 @@ namespace Client.Scripts.Missions
 
         }
         
-        private string NormalizeString(string input)
-        {
-            return input.ToLower().Replace(" ", "");
-        }
-        
         public override void ResetMission()
         {
             _inputAnswer.text = string.Empty;

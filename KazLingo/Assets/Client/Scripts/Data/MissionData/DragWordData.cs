@@ -1,4 +1,3 @@
-using System;
 using Client.Scripts.Missions;
 using UnityEngine;
 
@@ -7,16 +6,13 @@ namespace Client.Scripts.Data
     [CreateAssetMenu(fileName = "DragWordMission", menuName = "Create Mission/Drag Mission", order = 0)]
     public sealed class DragWordData : MissionBaseData
     {
-        [field:SerializeField] public DragWordMission DragWordMission { get; private set; }
+        public DragWordMission DragWordMission { get; private set; }
 
-        [field:SerializeField, TextArea]
-        public string QuestionText { get; private set; }
-        [field:SerializeField, TextArea]
-        public string AnswerText { get; private set; }
-        [field:SerializeField, TextArea]
-        public string TrueText { get; private set; }
-        [field:SerializeField]
-        public int InputIndex { get; private set; }
+        public string Answer;
+        public string[] CorrectOption;
+        public int InputIndex;
+        public WordInfo QuestionText;
+        public WordInfo AnswerText;
 
         private void OnValidate()
         {
